@@ -19,3 +19,11 @@ const menu = [
 ];
 
 // your code here
+const counts = { food: 0, drink: 0, dessert: 0 };
+menu.forEach(item => {
+  counts[item.category]++;
+});
+
+console.log(`food: ${counts.food}`);
+console.log(`drink: ${counts.drink}`);
+console.log(`dessert: ${counts.dessert}`);

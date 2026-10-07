@@ -11,3 +11,18 @@
 const scores = [78, 45, 92, 60, 55, 88, 39];
 
 // your code here
+const passingScore = 60;
+let passedCount = 0;
+let lowestScore = scores[0];
+
+for (let i = 0; i < scores.length; i++) {
+  if (scores[i] >= passingScore) {
+    passedCount++;
+  }
+  if (scores[i] < lowestScore) {
+    lowestScore = scores[i];
+  }
+}
+
+console.log(`Passed: ${passedCount} of ${scores.length}`);
+console.log(`Lowest score: ${lowestScore}`);

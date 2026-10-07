@@ -19,3 +19,17 @@ const menu = [
 ];
 
 // your code here
+const drinks = menu.filter(item => item.category === "drink");
+console.log("Drinks:");
+drinks.forEach(drink => {
+  console.log(`- ${drink.name}: ${drink.price} baisa`);
+});
+
+let cheapestItem = menu[0];
+menu.forEach(item => {
+  if (item.price < cheapestItem.price) {
+    cheapestItem = item;
+  }
+});
+
+console.log(`Cheapest: ${cheapestItem.name} (${cheapestItem.price} baisa)`);
